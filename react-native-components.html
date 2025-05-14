@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mastering React Native Components: From Basics to Advanced</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="post.html?id=1">First Steps in Flutter</a></li>
+                <li><a href="post.html?id=2" class="active">Mastering React Native Components</a></li>
+                <li><a href="post.html?id=3">Exploring Kotlin for Android</a></li>
+            </ul>
+        </nav>
+        <h1>Mastering React Native Components: From Basics to Advanced</h1>
+    </header>
+
+    <main>
+        <article class="blog-post">
+            <p class="post-meta">Published on May 8, 2025 by [Your Name]</p>
+            <img src="placeholder-react-native.jpg" alt="React Native Components Example">
+            <p>React Native allows developers to build mobile apps using JavaScript and React. At its core are Components – reusable building blocks for your UI. Let's explore them in detail.</p>
+
+            <h2>Basic UI Components</h2>
+            <p>React Native provides a set of core components for building basic UI elements:</p>
+            <ul>
+                <li><strong>View:</strong> The most fundamental building block, similar to a `div` in web development.</li>
+                <li><strong>Text:</strong> Used to display text.</li>
+                <li><strong>Image:</strong> For displaying images.</li>
+                <li><strong>TextInput:</strong> Allows users to input text.</li>
+                <li><strong>Button:</strong> A basic button component.</li>
+            </ul>
+
+            <h2>Component State Management</h2>
+            <p>Understanding state is crucial for building interactive components:</p>
+            <ul>
+                <li><strong>useState Hook:</strong> In functional components, <code>useState</code> allows you to add state variables and functions to update them.</li>
+                <li><strong>Class Components (Legacy):</strong> Class components have a <code>state</code> object and use <code>this.setState()</code> to update it.</li>
+            </ul>
+
+            <h2>Building Complex Components</h2>
+            <p>You can combine basic components to create more complex and reusable UI elements. For example, a custom card component might consist of a <code>View</code> containing an <code>Image</code>, <code>Text</code> for the title, and another <code>Text</code> for the description.</p>
+            <pre><code>
+import React, { useState } from 'react';
+import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
+
+const ProductCard = ({ title, imageUrl, description, onPress }) => {
+  return (
+    &lt;TouchableOpacity style=&#123;styles.card&#125; onPress=&#123;onPress&#125;&gt;
+      <img style="width: 100%; height: 150px;" src="image-url-placeholder.jpg" alt="Product Image" />
+      <div class="text-container">
+        <h3 class="title">{title}</h3>
+        <p class="description">{description}</p>
+      </div>
+    </TouchableOpacity>
+  );
+};
+
+const styles = StyleSheet.create({
+  card: {
+    backgroundColor: '#fff',
+    borderRadius: 8,
+    overflow: 'hidden',
+    marginVertical: 8,
+    elevation: 3,
+  },
+  image: {
+    width: '100%',
+    height: 150,
+  },
+  textContainer: {
+    padding: 16,
+  },
+  title: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 8,
+  },
+  description: {
+    fontSize: 16,
+    color: '#555',
+  },
+});
+
+export default ProductCard;
+            </code></pre>
+            <p>This example demonstrates how to create a reusable <code>ProductCard</code> component using basic React Native components and styling.</p>
+        </article>
+
+        <section id="comments">
+            <h2>Comments</h2>
+            <div class="comment">
+                <p class="comment-author">ReactNativeDev:</p>
+                <p>This breakdown of components is very helpful. Thanks!</p>
+            </div>
+            <div class="comment">
+                <p class="comment-author">CrossPlatformPro:</p>
+                <p>How does state management in React Native compare to web React?</p>
+            </div>
+            <form id="comment-form">
+                <textarea placeholder="Your Comment" required></textarea>
+                <button type="submit">Post Comment</button>
+            </form>
+            <p id="comment-message"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 The Mobile App Dev Hub</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

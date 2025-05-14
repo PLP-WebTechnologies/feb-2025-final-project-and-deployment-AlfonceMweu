@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Steps in Flutter: Building Your Initial UI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="post.html?id=1" class="active">First Steps in Flutter</a></li>
+                <li><a href="post.html?id=2">Mastering React Native Components</a></li>
+                <li><a href="post.html?id=3">Exploring Kotlin for Android</a></li>
+            </ul>
+        </nav>
+        <h1>First Steps in Flutter: Building Your Initial UI</h1>
+    </header>
+
+    <main>
+        <article class="blog-post">
+            <p class="post-meta">Published on May 1, 2025 by [Your Name]</p>
+            <img src="placeholder-flutter.jpg" alt="Flutter UI Example">
+            <p>Welcome to the exciting world of Flutter! In this beginner-friendly guide, we'll take your first steps in building beautiful and responsive user interfaces for mobile, web, and desktop from a single codebase.</p>
+
+            <h2>Setting Up Your Flutter Environment</h2>
+            <p>Before diving into UI development, ensure you have Flutter SDK installed and configured correctly on your machine. Follow the official Flutter documentation for your operating system...</p>
+
+            <h2>Understanding Widgets: The Building Blocks</h2>
+            <p>In Flutter, everything is a Widget. Widgets describe what their view should look like given their current configuration and state. There are two main types of widgets:</p>
+            <ul>
+                <li><strong>Stateless Widgets:</strong> These widgets have no internal state that can change over the lifetime of the widget. They are useful for displaying static information.</li>
+                <li><strong>Stateful Widgets:</strong> These widgets have internal state that can change during the widget's lifetime, allowing for dynamic UIs.</li>
+            </ul>
+
+            <h2>Basic Layout Widgets</h2>
+            <p>Flutter provides powerful layout widgets to structure your UI:</p>
+            <ul>
+                <li><strong>Container:</strong> A fundamental widget for painting, sizing, positioning, and child widgets.</li>
+                <li><strong>Row and Column:</strong> Arrange widgets horizontally and vertically, respectively.</li>
+                <li><strong>Stack:</strong> Positions widgets on top of each other.</li>
+                <li><strong>Expanded:</strong> Makes a child of a Row, Column, or Flex fill the available space.</li>
+            </ul>
+
+            <h2>Building a Simple UI</h2>
+            <p>Let's create a basic screen with a centered text:</p>
+            <pre><code>
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(
+    Center(
+      child: Text(
+        'Hello Flutter!',
+        textDirection: TextDirection.ltr,
+      ),
+    ),
+  );
+}
+            </code></pre>
+            <p>This simple example demonstrates the basic structure of a Flutter app and the use of the <code>Center</code> and <code>Text</code> widgets.</p>
+        </article>
+
+        <section id="comments">
+            <h2>Comments</h2>
+            <div class="comment">
+                <p class="comment-author">User123:</p>
+                <p>Great introduction to Flutter! Looking forward to more tutorials.</p>
+            </div>
+            <div class="comment">
+                <p class="comment-author">FlutterFan:</p>
+                <p>I'm having trouble with the environment setup. Any tips?</p>
+            </div>
+            <form id="comment-form">
+                <textarea placeholder="Your Comment" required></textarea>
+                <button type="submit">Post Comment</button>
+            </form>
+            <p id="comment-message"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 The Mobile App Dev Hub</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

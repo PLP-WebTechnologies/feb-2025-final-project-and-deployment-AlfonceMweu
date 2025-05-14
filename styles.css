@@ -1,0 +1,268 @@
+/* Reset some default browser styles */
+body, h1, h2, h3, p, ul, ol, li, form, input, textarea, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: #444;
+    padding: 0.5rem 0;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+}
+
+nav a:hover, nav a.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Main Content */
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Blog Post Preview */
+.blog-post-preview {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1rem;
+}
+
+.blog-post-preview h2 a {
+    color: #333;
+    text-decoration: none;
+}
+
+.blog-post-preview h2 a:hover {
+    color: #007bff;
+}
+
+.post-meta {
+    font-size: 0.8rem;
+    color: #777;
+    margin-bottom: 0.5rem;
+}
+
+.read-more {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+.read-more:hover {
+    background-color: #0056b3;
+}
+
+/* Blog Post */
+.blog-post img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.blog-post h2 {
+    margin-top: 1.5rem;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.5rem;
+}
+
+.blog-post ul, .blog-post ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Newsletter */
+#newsletter {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f0f0f0;
+    margin-top: 2rem;
+}
+
+#newsletter form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto 1rem;
+}
+
+#newsletter input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    width: 70%;
+}
+
+#newsletter button {
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+#newsletter button:hover {
+    background-color: #0056b3;
+}
+
+#newsletter-message {
+    color: green;
+    font-weight: bold;
+}
+
+/* Comments */
+#comments {
+    margin-top: 2rem;
+    border-top: 1px solid #ccc;
+    padding-top: 1rem;
+}
+
+.comment {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.comment-author {
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+#comment-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+    resize: vertical;
+}
+
+#comment-form button {
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#comment-form button:hover {
+    background-color: #0056b3;
+}
+
+#comment-message {
+    color: green;
+    font-weight: bold;
+}
+
+/* About Page */
+#about-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#about-content img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.social-links {
+    margin-top: 1rem;
+}
+
+.social-links a {
+    color: #333;
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
+}
+
+.social-links a:hover {
+    color: #007bff;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #444;
+    color: #fff;
+    margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    #newsletter form {
+        flex-direction: column;
+    }
+
+    #newsletter input {
+        width: 100%;
+        border-radius: 5px;
+        margin-bottom: 0.5rem;
+    }
+
+    #newsletter button {
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    #about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #about-content img {
+        width: 150px;
+        height: 150px;
+    }
+}
